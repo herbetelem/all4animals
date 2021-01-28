@@ -57,13 +57,13 @@ def registerPage(request):
                 customer_data.user = user_created
                 customer_data.save()
 
-                return redirect('{% url "login" %}')
+                return redirect('login')
 
 
         context = {'form':form,}
         return render(request, 'registration/register.html', context)
 
-@login_required(login_url='{% url "login" %}')
+@login_required(login_url='login')
 def accountSettings(request):
     customer = request.user.customer
     name = customer.name
