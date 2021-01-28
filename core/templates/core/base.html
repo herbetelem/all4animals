@@ -43,15 +43,15 @@
                     </li>
                     <li>|</li>
                     <li class="a4_nav-item dropdown">
-                        <a class="a4_nav-link" href="/alerte/">Créer une annonce</a>
+                        <a class="a4_nav-link" href="/alerte">Créer une annonce</a>
                     </li>
                     <li>|</li>
                     <li class="a4_nav-item">
-                        <a class="a4_nav-link" href="/annonce_trouver/">Trouvé</a>
+                        <a class="a4_nav-link" href="/annonce_trouver">Trouvé</a>
                     </li>
                     <li>|</li>
                     <li class="a4_nav-item">
-                        <a class="a4_nav-link" href="/annonce_perdu/">Perdu</a>
+                        <a class="a4_nav-link" href="/annonce_perdu">Perdu</a>
                     </li>
                 </ul>
             </div>
@@ -63,28 +63,28 @@
                 <div class="a4_menu_show">
                     <ul>
                         <li><a href="/">Acceuil</a></li>
-                        <li><a href="/alerte/">Créer une annonce</a></li>
-                        <li><a href="/annonce_trouver/">Trouvé</a></li>
-                        <li><a href="/annonce_perdu/">Perdu</a></li>
+                        <li><a href="/alerte">Créer une annonce</a></li>
+                        <li><a href="/annonce_trouver">Trouvé</a></li>
+                        <li><a href="/annonce_perdu">Perdu</a></li>
                         {% if user.is_authenticated %}
-                        <li><a href="/login/">Page Profil</a></li>
-                        <li><a href="/logout/">Deconnexion</a></li>
+                        <li><a href="/login">Page Profil</a></li>
+                        <li><a href="/logout">Deconnexion</a></li>
                         {% else %}
-                        <li><a href="/login/">Connexion</a></li>
+                        <li><a href="/login">Connexion</a></li>
                         {% endif %}
                     </ul>
                 </div>
             </div>
             <div class="a4_nav_avatar">
                 {% if user.is_authenticated %}
-                <a class="a4_navbar-profil" href="/login/">
+                <a class="a4_navbar-profil" href="/login">
                     <img src="{{request.user.customer.profile_pic.url}}" alt="logo All4animals" title="Logo">
                 </a>
-                <a class="a4_navbar-profil bar_logout" href="{% url 'logout/' %}">
+                <a class="a4_navbar-profil bar_logout" href="{% url 'logout' %}">
                     <img class="nav_logout" src="{% static 'static_alert/assets/nav_footer/logout_logo.png' %}" alt="logo All4animals" title="Logout">
                 </a>
                 {% else %}
-                <a class="a4_navbar-profil" href="/login/">
+                <a class="a4_navbar-profil" href="/login">
                     <img src="{% static 'static_alert/assets/nav_footer/profil.png' %}" alt="logo All4animals" title="Logo">
                 </a>
                 {% endif %}
@@ -100,9 +100,9 @@
     <footer class="a4_footer">
         <div class="a4_block_menu">
             <ul>
-                <li><a href="/alerte/">Créer une annonce</a></li>
-                <li><a href="/annonce/">Parcourir les annonces</a></li>
-                <li><a href="/hebergement/">Hébergement</a></li>
+                <li><a href="/alerte">Créer une annonce</a></li>
+                <li><a href="/annonce">Parcourir les annonces</a></li>
+                <li><a href="/hebergement">Hébergement</a></li>
             </ul>
         </div>
         <div class="a4_block_logo">
@@ -129,8 +129,8 @@
         </div>
         <div class="a4_block_contact">
             <ul>
-                <li><a href="/contact/">Nous contacter</a></li>
-                <li><a href="/annonce/">Conditions générales</a></li>
+                <li><a href="/contact">Nous contacter</a></li>
+                <li><a href="/annonce">Conditions générales</a></li>
             </ul>
 
         </div>
