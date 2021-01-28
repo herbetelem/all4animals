@@ -129,9 +129,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# all migration path
-website\all4animals\alert\migrations
-website\all4animals\housing\migrations
-website\all4animals\registration\migrations
 # Media file
-.website/all4animals/media/alert
+.media/alert

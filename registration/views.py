@@ -15,7 +15,7 @@ from .models import Customer
 
 def loginPage(request):
     if request.user.is_authenticated:
-        return redirect('/account')
+        return redirect('/account/')
     else:
         user = None
         if request.method == 'POST':
@@ -35,7 +35,7 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login')
+    return redirect('login/')
 
 
 def registerPage(request):
@@ -57,13 +57,13 @@ def registerPage(request):
                 customer_data.user = user_created
                 customer_data.save()
 
-                return redirect('login')
+                return redirect('login/')
 
 
         context = {'form':form,}
         return render(request, 'registration/register.html', context)
 
-@login_required(login_url='login')
+@login_required(login_url='login/')
 def accountSettings(request):
     customer = request.user.customer
     name = customer.name
