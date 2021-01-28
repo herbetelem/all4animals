@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block link%} 
+<link rel="stylesheet" href="{% static 'static_alert/css/alert_detail.css' %}">
+{%endblock%}
+
+{% block title%}
+Detail d'une alerte
+{%endblock%}
+
+{% block body%}
+{% if object.type_alert.id == 1 %}
+    <a class="btn btn-info" href="../../annonce_perdu"> Retour</a>
+{%else%}
+    <a class="btn btn-info" href="../../annonce_trouver"> Retour</a>
+{%endif%}
+<br/>
+<div class="a4_container_alert">
+    <div class="title_alert">
+        <h1>{{object.type_animal}} {{object.type_alert}} </h1>
+        <h2>Le {{object.date}}</h2>
+    </div>
+    <br/>
+    <div class="a4_presentation">
+        <div class=a4_container_img>
+            <img src="{{object.img.url}}" alt="image {{object.type_animal}}"/>
+        </div>
+        <div class="a4_information">
+            <p>{{object.type_animal}}</p>
+            <p>Sexe : {{object.gender}}</p>
+            <p>Couleur : {{object.color}}</p>
+        </div>
+    </div>
+    <br/>
+    <div class="a4_presentation">
+        <div>
+            <p>{{object.commentary}}</p>
+        </div>
+        <div class="place">
+            <p class="title">Lieu</p>
+            <p>{{object.date}}</p>
+            <p>{{object.street}}</p>
+            <p>{{object.city}}</p>
+        </div>
+    </div>
+    <a href="mailto:{{object.email}}" class="btn btn-primary">Contact</a>
+    <br/>
+    <br/>
+    
+
+</div>
+
+
+
+
+
+{%endblock%}

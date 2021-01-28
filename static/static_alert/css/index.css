@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container1{
+    padding-top: 2%;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 10%;
+}
+.container1 .leftbox, .container1 .rightbox{
+    width: 50%;
+    text-align: center;
+}
+.container1 .big_pic{
+    width: 100%;
+}
+.container1 .top-border{
+    padding-bottom: 20px;
+}
+.container1 .left-border, .right-border, .top-border{
+    border-top: dashed #FDCC68 2px;
+    border-bottom: dashed #FDCC68 2px;
+}
+.container1 .left-border, .right-border{
+    height: 20px;
+    width: 100%;
+}
+.container1 .bottom-border{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: 5% 0% 0% 0%;
+}
+.container1 .border-img{
+    width: 25%;
+    padding: 0% 5% 0% 5%;
+}
+.container1 h1{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 300%;
+    margin: 5% 0% 5% 0%;
+}
+.container1 p{
+    font-size: 100%;
+}
+.container2{
+    display: flex;
+    align-items: center;
+    background: #f9f4fb;
+    height: 270px;
+}
+.container2 div{
+    width: 33%;
+    text-align: center;
+    font-size: 110%;
+}
+.container2 h3{
+    font-family: 'Hachi Maru Pop', cursive;
+}
+.container2 div img{
+    width: 20%;
+    border-radius: 75%;
+    box-shadow: 1px 2px 10px 2px black;
+    margin-bottom: 2%;
+}
+.container2 div img:hover {
+    filter: blur(4px);
+    transition: 0.8s;
+}
+.title3{
+    font-size: 200%;
+    width: 50%;
+    text-align: center;
+    border-bottom: solid;
+    align-items: center;
+    margin: 5% auto 7.5% auto;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+.container3{
+    margin: auto;
+    display: flex;
+}
+.container3 div{
+    width: 70%;
+    margin-bottom: 2%;
+}
+.container3 div img{
+    width: 65%;
+    border-radius: 50%;
+}
+.container3 .pic{
+    width: 25%;
+    text-align: center;
+}
+.container3 .rightbox, .container3 .leftbox{
+    display: flex;
+    align-items: center;
+}
+.container3 .text{
+    background: #fcd5ba;
+    padding: 0 2% 0 2%;
+    font-size: 100%;
+}
+.container3 h3{
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+@media (max-width: 991px) {
+    .container1, .container2, .container3{
+        display: inline-block;
+    }
+    .all_container *{
+        width: 100%!important;
+    }
+    .container1 h1{
+        font-size: 200%;
+    }
+    .container1 p{
+        font-size: 125%;
+    }
+    .container1 .paragraph2{
+        display: none;
+    }
+    .container1 .border-img{
+        width: 20%!important;
+    }
+    .container2 div img{
+        width: 30%!important;
+    }
+    .container2{
+        height: auto!important;
+        font-size: 90%;
+    }
+    .container2 div{
+        padding: 5% 0% 5% 0%!important;
+    }
+    .title3{
+        margin: 10% auto 10% auto!important;
+        width: 80%!important;
+        font-size: 148%;
+    }
+    .container3{
+        text-align: center;
+}
+    .container3 .rightbox, .container3 .leftbox{
+        display: inline-block!important;
+        width: 90%!important;
+    }
+    .container3 .pic{
+        width: 40%!important;
+        margin: 5% auto 5% auto;
+    }
+    .container3 .text{
+        padding: 1%;
+    }
+}

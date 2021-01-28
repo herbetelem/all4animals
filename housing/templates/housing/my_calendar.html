@@ -1,0 +1,177 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block link%}
+<link rel="stylesheet" href="{% static 'static_housing/css/my_calendar.css' %}">
+{%endblock%}
+
+{% block title%}
+Calendrier
+{%endblock%}
+
+{% block body%}
+<div class="container a4_content">
+    <h2> Mon calendrier</h2>
+    <div class="a4_calendrier">
+        <h3 class="a4_month">Janvier 2021 <>
+        </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>lundi</th>
+                    <th>mardi</th>
+                    <th>mercredi</th>
+                    <th>jeudi</th>
+                    <th>vendredi</th>
+                    <th>samedi</th>
+                    <th>dimanche</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="1">
+                        <p class="a4_day">1</p>
+                    </td>
+                    <td id="2">
+                        <p class="a4_day">2</p>
+                        <div class="pastille_dog"></div>
+                    </td>
+                    <td id="3">
+                        <p class="a4_day">3</p>
+                    </td>
+                    <td id="4">
+                        <p class="a4_day">4</p>
+                    </td>
+                    <td id="5">
+                        <p class="a4_day">5</p>
+                    </td>
+                    <td id="6">
+                        <p class="a4_day">6</p>
+                    </td>
+                    <td id="7">
+                        <p class="a4_day">7</p>
+                        <div class="pastille_dog"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="8">
+                        <p class="a4_day">8</p>
+                    </td>
+                    <td id="9">
+                        <p class="a4_day">9</p>
+                        <div class="pastille_cat"></div>
+                    </td>
+                    <td id="10">
+                        <p class="a4_day">10</p>
+                    </td>
+                    <td id="11">
+                        <p class="a4_day">11</p>
+                    </td>
+                    <td id="12">
+                        <p class="a4_day">12</p>
+                    </td>
+                    <td id="13">
+                        <p class="a4_day">13</p>
+                    </td>
+                    <td id="14">
+                        <p class="a4_day">14</p>
+                        <div class="pastille_dog"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="15">
+                        <p class="a4_day">15</p>
+                    </td>
+                    <td id="16">
+                        <p class="a4_day">16</p>
+                        <div class="pastille_cat"></div>
+                    </td>
+                    <td id="17">
+                        <p class="a4_day">17</p>
+                    </td>
+                    <td id="18">
+                        <p class="a4_day">18</p>
+                    </td>
+                    <td id="19">
+                        <p class="a4_day">19</p>
+                        <div class="pastille_dog"></div>
+                    </td>
+                    <td id="20">
+                        <p class="a4_day">20</p>
+                        <div class="pastille_cat"></div>
+                    </td>
+                    <td id="21">
+                        <p class="a4_day">21</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="22">
+                        <p class="a4_day">22</p>
+                        <div class="pastille_dog"></div>
+                    </td>
+                    <td id="23">
+                        <p class="a4_day">23</p>
+                    </td>
+                    <td id="24">
+                        <p class="a4_day">24</p>
+                    </td>
+                    <td id="25">
+                        <p class="a4_day">25</p>
+                        <div class="pastille_cat"></div>
+                        <div class="pastille_bb_cat"></div>
+                    </td>
+                    <td id="26">
+                        <p class="a4_day">26</p>
+                        <div class="pastille_bb_cat"></div>
+                    </td>
+                    <td id="27">
+                        <p class="a4_day">27</p>
+                        <div class="pastille_bb_cat"></div>
+                    </td>
+                    <td id="28">
+                        <p class="a4_day">28</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="29">
+                        <p class="a4_day">29</p>
+                    </td>
+                    <td id="30">
+                        <p class="a4_day">30</p>
+                    </td>
+                    <td id="31">
+                        <p class="a4_day">31</p>
+                    </td>
+                    <td class="a4_next_month">
+                        <p class="a4_day">1</p>
+                    </td>
+                    <td class="a4_next_month">
+                        <p class="a4_day">2</p>
+                    </td>
+                    <td class="a4_next_month">
+                        <p class="a4_day">3</p>
+                    </td>
+                    <td class="a4_next_month">
+                        <p class="a4_day">4</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="a4_info_days">
+        <p>test</p>
+    </div>
+    <div class="clearfix"></div>
+    <div class="a4_legend">
+        <ul>
+            <li class="a4_dog">Chien</li>
+            <li class="a4_bb_dog">Chiot</li>
+            <li class="a4_cat">Chat</li>
+            <li class="a4_bb_cat">Chaton</li>
+        </ul>
+    </div>
+</div>
+<br>
+<br>
+<script src="{% static 'static_housing/js/my_calendar.js' %}"></script>
+{%endblock%}

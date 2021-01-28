@@ -1,0 +1,1 @@
+web: gunicorn all4animals.wsgi --log-file -

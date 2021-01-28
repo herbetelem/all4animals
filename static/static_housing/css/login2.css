@@ -1,0 +1,100 @@
+.a4_login{ 
+    width: 25%;
+    margin: auto;
+    border: 5px solid #fcd5ba;
+    border-radius: 25px;
+}
+
+.a4_registration{
+    background: cadetblue;
+}
+
+.a4_login_registration{
+    display: none;
+}
+
+.a4_login .a4_menu_login ul li{
+    font-size: 1.6em;
+    flex-grow: 2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 19px 0 0;
+}
+
+.a4_login .a4_menu_login ul li:first-of-type{
+    border-radius: 19px 0 0 0;
+}
+
+.a4_login .a4_menu_login ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.a4_login .a4_container_login{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.a4_container_login input::placeholder{
+    font-weight: normal;
+}
+
+.a4_container_login button{
+    width: 30%;
+    margin-bottom: 10px!important;
+}
+
+.a4_container_login .a4_block_login{
+    display: flex;
+    flex-direction: column;
+}
+
+.a4_container_login div {
+    margin-top: 5px;
+    margin-bottom: 0!important;
+}
+
+.a4_block_login button{
+    margin: auto;
+}
+
+.a4_email_pseudo{
+    display: flex;
+}
+
+.a4_email_pseudo div:first-of-type{
+    flex-grow: 2;
+    margin-right: 5px;
+}
+
+.a4_address{
+    display: flex;
+    justify-content: space-between;
+}
+
+.a4_password .a4_block_login, .a4_address .a4_block_login {
+    width: 45%;
+}
+
+/* CSS ABOUT MOBILE ONLY */
+@media (max-width: 991px) {
+    .a4_login{
+        width: 80%;
+    }
+    .a4_container_login button{
+        width: 50%;
+    }
+    .a4_email_pseudo, .a4_address{
+        flex-direction: column;
+    }
+
+    .a4_block_login{
+        width: 100%!important;
+    }
+
+}

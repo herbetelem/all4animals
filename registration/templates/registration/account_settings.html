@@ -1,0 +1,55 @@
+
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block link%}
+<link rel="stylesheet" href="{% static 'static_housing/css/account_settings.css' %}">
+{%endblock%}
+
+
+{% block title%}
+Account Settings
+{%endblock%}
+
+{% block body%}
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card card-body">
+				<a class="btn btn-warning" href="/"> &#8592; Page d'acceuil</a>
+				<hr>
+				<h3 style="text-align: center">Gestion des infos du compte</h3>
+				<hr>
+				<img class="profile-pic" src="{{request.user.customer.profile_pic.url}}" >
+			
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="card card-body">
+				
+				<form method="POST" action="" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="exampleInputEmail1">Nom</label>
+						<input type="text" name="name" value="{{name}}" maxlength="200" required="" id="id_name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Tél</label>
+						<input type="text" name="phone" value="{{phone}}" maxlength="200" required="" id="id_phone" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputFile">Changer l'Avatar</label>
+						<input type="file" class="form-control-file" name="profile_pic" accept="image/*" id="id_profile_pic" value="{{img}}">
+					</div>
+					
+					<br>
+					<input class="btn btn-primary" type="submit" name="Update Information">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

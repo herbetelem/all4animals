@@ -1,0 +1,76 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block link%} 
+<link rel="stylesheet" href="{% static 'static_alert/css/index.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+{%endblock%}
+
+{% block title%}
+Index
+{%endblock%}
+
+
+{% block body%}
+<br/>
+<div class="all_container">
+    <div class="container1">
+        <div class="leftbox">
+            <img class="big_pic" src="{% static 'static_alert/assets/alerte/all_pet.png' %}" alt="">
+        </div>
+        <div class="rightbox">
+            <div class="top-border"></div>
+            <h1>Aidez-nous à les retrouver</h1>
+            <p class="paragraph1"> De nos jours, plusieurs dizaines de milliers d'animaux domestique sont perdu chaque années, c'est en partant de ce triste constat que le site "All4Animals" a été développé.</p>
+            <br/>
+            <p class="paragraph2">Grâce a cet outil vous pouvez VOUS aussi apporter votre contribution a la réduction de ce triste chiffre, car oui chaque personne peut amener sa contribution à sa hauteur, partant de ceci, un question se pose : "Pourquoi pas vous ?"</p>
+            <br/>
+            <p class="paragraph2">Si vous trouvez ou voyez un animal qui semble perdu, AIDEZ le à retrouver sa maison en le déclarant sur notre site. Si vous vous ête concerné par la perte de votre animal, cet animal qui vous est cher vous attend peut être au bout d'une annonce</p>
+            <div class="bottom-border">
+                <div class="left-border"></div>
+                <img class ="border-img" src="{% static 'static_alert/assets/alerte/arrow.png' %}" alt="">
+                <div class="right-border"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="leftbox">
+            <a href="/annonce_perdu"><img src="{% static 'static_alert/assets/alerte/dog.png' %}" alt=""></a>
+            <h3>Perdu</h3>
+            <p>Consulter les annonces des animaux perdus</p>
+        </div>
+        <div class="centerbox">
+            <a href="/alerte"><img src="{% static 'static_alert/assets/alerte/cat_dog.jpg' %}" alt=""></a>
+            <h3>Alerte</h3>
+            <p>Créer une annonce</p> 
+        </div> 
+        <div class="rightbox">
+            <a href="/annonce_trouver"><img src="{% static 'static_alert/assets/alerte/cat.png' %}" alt=""></a>
+            <h3>Trouvé</h3>
+            <p>Consulter les annonces des animaux trouvés</p> 
+        </div> 
+    </div>
+
+    <h2 class="title3">Nos belles histoires</h2>
+    <div class="container3">
+        <div class="leftbox">
+            <div class="pic"><img src="{% static 'static_alert/assets/alerte/bouvier_bernois.jpg' %}" alt=""></div>
+            <div class="text">
+                <h3>L'histoire de Bonnie</h3>
+                <p>Bonnie a pris peur lorsqu'elle a entendu un klaxon, je n'ai pas pu la suivre et penser l'avoir perdu... Après des heures de recherches j'ai consulté le site internet et je l'ai retrouvée chez une famille qui l'avait prise sous son toit.</p>
+            </div>
+        </div>  
+        
+        <div class="rightbox">
+            <div class="pic"><img src="{% static 'static_alert/assets/alerte/cat2.png' %}" alt=""></div>
+            <div class="text">
+                <h3>L'histoire de Mune</h3>
+                <p>J'ai trouvé ce chat en allant faire un jogging, au début je ne pouvais pas l'approcher puis en lui donnant de la nourriture il est venu vers moi. J'ai pu le prendre en photo et l'aider à retrouver sa famille grace à All4animals !</p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

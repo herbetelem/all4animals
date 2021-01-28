@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+
+{% block link%} 
+<link rel="stylesheet" href="{% static 'static_alert/css/alert_user.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Potta+One&display=swap" rel="stylesheet">
+{%endblock%}
+
+{% block title%} 
+Parcourir annonce
+{%endblock%}
+
+{% block body%} 
+<div class="a4_all_container">
+    <h2> Animaux trouvé et aperçu </h2>
+    <br/>
+    <div class="card card-body div_form form_filter">
+        <form action="" method="GET">
+            <div class="filter">
+                <div><label for="filter">Animal</label></div>
+                <div>{% render_field my_filter.form.type_animal class="ad" %}</div>
+            </div>
+            <div class="filter">
+                <div><label for="filter">Sexe</label></div>
+                <div>{% render_field my_filter.form.gender class="ad" %}</div>
+            </div>
+            <div class="filter">
+                <div><label for="filter">Couleur</label></div>
+                <div>{% render_field my_filter.form.color class="ad" %}</div>
+            </div>
+            <button class='btn btn-primary' type="submit"> Rechercher</button>
+        </form>
+    </div>
+    <div class="a4_container_alert"> 
+        {%for alert in page_obj%}
+            <div class="a4_element" id="{{alert.img}}">
+                <a href="{% url 'alert:choix_alert' alert.id %}" >
+                    <h3>{{alert.type_animal}} {{alert.type_alert}}</h3>
+                    <div class="box_img"><img src="{{alert.img.url}}" alt="image {{alert.type_animal}}"/></div>
+                    <p>{{alert.city}}</p>
+                    <p>{{alert.date}}</p>
+                </a> 
+            </div>  
+        {%endfor%}
+    </div>
+    <br/>
+    <div class="paginator">
+        <span>
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo;</a>
+                <a href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+            {% endif %}
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+            {% endif %}
+        </span>
+        <div>
+            <p>Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}</p>
+        </div>
+    </div>
+</div>
+{%endblock%}

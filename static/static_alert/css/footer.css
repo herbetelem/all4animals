@@ -1,0 +1,55 @@
+footer{
+    height: 100px;
+    width: 100%;
+    height: 13vh;
+    background: #78c2ad;
+}
+
+.a4_footer div{
+    margin: auto;
+}
+
+.a4_footer{
+    display: flex;
+}
+
+footer ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+footer li a{
+    font-size: 1.3em;
+    color: white;
+}
+
+footer li a:hover{
+    color: white;
+    text-decoration: line;
+}
+
+.a4_block_logo {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.horizontal_bar{
+    height: 40px;
+    border: 1px solid white ;
+}
+
+/* CSS ABOUT MOBILE ONLY */
+@media (max-width: 992px) {
+    .a4_block_menu, .a4_block_contact, .horizontal_bar{
+       display:none;
+    }
+
+    .a4_block_logo img {
+       width: 50px;
+    }
+    .a4_block_logo{
+       width: 100%;
+    }
+
+}

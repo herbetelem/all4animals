@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title%}
+Contact
+{%endblock%}
+
+{% block body%}
+<div class="container a4_form_contact">
+    <h1>Hello</h1>
+    <h1>{{alert_detail.user.username}}</h1>
+    <h1>{{alert_detail.user.email}}</h1>
+
+
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Créer un message</legend>
+            <div class="form-group">
+                <label for="Email">Votre Email</label>
+                <input type="email" class="form-control" id="Email" aria-describedby="email" placeholder="Entrer email"
+                    name="email">
+            </div>
+            <div class="form-group">
+                <label for="Subject">Objet</label>
+                <input type="text" class="form-control" id="Subject" aria-describedby="subject"
+                    placeholder="Entrer le titre de votre alerte" name="subject">
+            </div>
+            <div class="form-group">
+                <label for="description">Description de l'animal</label>
+                <input type="text" class="form-control" id="message" aria-describedby="message"
+                placeholder="Description de l'animal" name="message">
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </fieldset>
+    </form>
+</div>
+{%endblock%}

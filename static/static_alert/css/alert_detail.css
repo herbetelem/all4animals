@@ -1,0 +1,51 @@
+.a4_container_alert{
+    width: 70%!important;
+    margin: auto;
+    text-align: center;
+}
+
+.title_alert{
+    background: #936a4f;
+    color:white;
+}
+
+.a4_presentation{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.a4_presentation div {
+    width: 35%;
+    align-self: center;
+}
+
+.a4_container_img{
+    width: 50%;
+    justify-content: center;
+}
+
+.a4_container_img img{
+    width: 100%;
+}
+
+.a4_information{
+    width: 50%;
+    ;
+}
+
+.a4_information p {
+    border-bottom : 1px solid #DCDCDC;
+}
+
+.a4_presentation p{
+    font-size: 2em;
+    margin: 0;
+}
+
+.a4_presentation .place{
+    border: 1px solid #DCDCDC;
+}
+
+.a4_presentation div .title{
+    background: #DCDCDC ;
+}

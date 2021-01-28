@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #78c2ad;
+    height: 10vh;
+}
+
+nav li {
+    list-style: none;
+    text-decoration: none;
+    color: white
+}
+
+nav li a {
+    color: white;
+}
+
+nav li a:hover {
+    color: white;
+    text-decoration: line;
+}
+
+.a4_menu_web {
+    width: 70%;
+    float: left;
+}
+
+.block_min_height {
+    min-height: 73vh;
+}
+
+
+/* CSS ABOUT PC ONLY */
+
+@media (min-width: 992px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    .a4_logo-nav {
+        width: 15%;
+        float: left;
+        padding-left: 20px;
+    }
+    .a4_logo-nav img {
+        height: 20vh;
+        width: auto;
+        border: 4px solid white;
+        border-radius: 50%;
+    }
+    .a4_nav_avatar {
+        width: 10%;
+        float: left;
+        height: 10vh;
+        display: flex;
+    }
+    .a4_nav_avatar img {
+        height: 100%;
+    }
+
+    .a4_navbar-profil {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 5px;
+    }
+
+
+
+    .bar_logout {
+        width: 40px;
+        height: 40px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .nav_logout {
+        height: 100% !important;
+        border-radius: 0 !important ;
+        margin-left: 0 !important;
+    }
+
+    .a4_menu_web {
+        height: 10vh;
+        line-height: 10vh;
+    }
+    nav li {
+        font-size: 2.5vh;
+        margin-right: 70px;
+    }
+    .a4_menu_mobil {
+        display: none;
+    }
+}
+
+
+/* CSS ABOUT MOBILE ONLY */
+
+@media (max-width: 991px) {
+    .a4_logo-nav {
+        width: 20%;
+        float: left;
+        padding-left: 20px;
+    }
+    .a4_logo-nav img {
+        height: 16vh;
+        width: auto;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+    .a4_nav_avatar {
+        display: none;
+        width: 10%;
+        float: left;
+        height: 8vh;
+        line-height: 8vh;
+        padding-right: 4px;
+    }
+    .a4_nav_avatar img {
+        width: 80%;
+        margin: 20%;
+    }
+    nav {
+        height: 8vh;
+    }
+    .a4_menu_web {
+        display: none;
+    }
+    .a4_menu_mobil {
+        width: 70%;
+        float: left;
+        line-height: 8vh;
+    }
+    .a4_block_burger {
+        float: right;
+        height: 8vh;
+    }
+    .a4_menu_mobil img {
+        height: 3vh;
+        margin: auto;
+    }
+    .a4_menu_show {
+        display: none;
+        position: absolute;
+        background: #78c2ad;
+        width: 100%;
+        top: 8vh;
+        left: 0;
+        height: 42vh;
+        z-index: 9;
+    }
+    .a4_menu_show ul li {
+        width: 100%;
+        height: 7vh;
+        border-bottom: 1px solid white;
+        line-height: 7vh;
+    }
+    .a4_menu_show ul li:first-of-type {
+        border-top: 1px solid white;
+    }
+    .a4_menu_show ul li a {
+        margin-left: 5vh;
+    }
+}
