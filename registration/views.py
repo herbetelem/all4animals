@@ -15,7 +15,7 @@ from .models import Customer
 
 def loginPage(request):
     if request.user.is_authenticated:
-        return redirect('/account/')
+        return redirect('{% url "account" %}')
     else:
         user = None
         if request.method == 'POST':
@@ -25,7 +25,7 @@ def loginPage(request):
 
         if user is not None:
             login(request, user)
-            return redirect('../')
+            return redirect('{% url "index" %}')
         
         else:
             messages.info(request, 'Username OR password is incorrect')
@@ -35,12 +35,12 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login/')
+    return redirect('{% url "login" %}')
 
 
 def registerPage(request):
     if request.user.is_authenticated:
-        return redirect('../')
+        return redirect('{% url "index" %}')
     else:
         form = CreateUserForm()
         
@@ -57,13 +57,13 @@ def registerPage(request):
                 customer_data.user = user_created
                 customer_data.save()
 
-                return redirect('login/')
+                return redirect('{% url "login" %}')
 
 
         context = {'form':form,}
         return render(request, 'registration/register.html', context)
 
-@login_required(login_url='login/')
+@login_required(login_url='{% url "login" %}')
 def accountSettings(request):
     customer = request.user.customer
     name = customer.name
