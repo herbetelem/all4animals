@@ -67,7 +67,7 @@
                         <li><a href="/annonce_trouver">Trouvé</a></li>
                         <li><a href="/annonce_perdu">Perdu</a></li>
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'account' %}">Page Profil</a></li>
+                        <li><a href="/account/">Page Profil</a></li>
                         <li><a href="/logout">Deconnexion</a></li>
                         {% else %}
                         <li><a href="/login">Connexion</a></li>
